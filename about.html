@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Webbed</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- IBM Plex Sans Font -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #fdf6ec;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      border-bottom: 1px solid #ccc;
+    }
+    .hero {
+      background-color: #f2f2f2;
+      padding: 6rem 1rem 4rem;
+    }
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      padding: 1.5rem 0;
+      color: #777;
+    }
+    .nav-link:hover {
+      color: #0d6efd !important;
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-primary fw-bold" href="index.html">
+          <img src="images/Webbed128.png" alt="Webbed Logo" class="me-2" style="height: 32px;">
+          Webbed
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Us Hero Section -->
+  <section id="about" class="hero text-center">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-5 fw-bold mb-3">About Webbed</h1>
+      <p class="lead mb-4">Empowering users to take control of their online security with real-time client-side script analysis.</p>
+    </div>
+  </section>
+
+  <!-- Our Mission -->
+  <section id="mission" class="py-5 bg-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="fw-bold mb-5">Our Mission</h2>
+      <p class="lead mb-4">At Webbed, our mission is simple: To help every day internet users identify the possible vulnerabilities they may be exposed to online.</p>
+      <p class="mb-4">We believe that browsing the internet should be safe, and it’s our goal to make it possible for every user to easily identify and address security issues directly in their browser, without the need for complex setups or external services.</p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section id="story" class="py-5">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="fw-bold mb-5">Our Story</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead mb-4">We are a group of final-year students who came together to work on a project that would make a real impact on web security. With a shared passion for technology and a desire to solve real-world problems, we decided to focus on the vulnerabilities that exist in client-side scripts, an often overlooked aspect of web security.</p>
+          <p>As we researched, we realized just how many websites are vulnerable to attacks like XSS and script injections due to poor security practices in client-side code. That’s when we decided to build Webbed — a client-side script security inspector designed to detect these vulnerabilities in real-time, right within the browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+<section id="team" class="py-5 bg-light">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="fw-bold mb-5">The Team Behind Webbed</h2>
+        <div class="row justify-content-center">
+            <!-- Jeff -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-img-top rounded-circle mx-auto" style="font-size: 3rem; color: #007bff;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jeff</h5>
+                        <p class="card-text">Group Leader</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mason -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-img-top rounded-circle mx-auto" style="font-size: 3rem; color: #007bff;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mason</h5>
+                        <p class="card-text">Team Member</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Melvin -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-img-top rounded-circle mx-auto" style="font-size: 3rem; color: #007bff;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Melvin</h5>
+                        <p class="card-text">Team Member</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jovan -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-img-top rounded-circle mx-auto" style="font-size: 3rem; color: #007bff;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jovan</h5>
+                        <p class="card-text">Team Member</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shannon -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-img-top rounded-circle mx-auto" style="font-size: 3rem; color: #007bff;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Shannon</h5>
+                        <p class="card-text">Team Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3">
+            <a href="index.html" class="text-decoration-none me-4">Home</a>
+            <a href="about.html" class="text-decoration-none me-4">About Us</a>
+            <a href="policy.html" class="text-decoration-none me-4">Privacy Policy</a>
+            <a href="terms.html" class="text-decoration-none">Terms of Service</a>
+          </div>
+          <small>&copy; 2025 Webbed Security Inspector. All rights reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+
+</html>
