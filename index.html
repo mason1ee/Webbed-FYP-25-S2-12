@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
   <!-- AOS Animations -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     body {
@@ -41,6 +44,37 @@
       padding: 1.5rem 0;
       color: #777;
     }
+    .nav-link:hover {
+      color: #0d6efd !important;
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    .uniform-img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .screenshot-wrapper {
+      position: relative;
+      cursor: zoom-in;
+    }
+    .screenshot-wrapper::after {
+      content: '\f002';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.8);
+      padding: 6px;
+      border-radius: 50%;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .screenshot-wrapper:hover::after {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -49,19 +83,19 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Webbed</a>
+      <a class="navbar-brand d-flex align-items-center text-primary fw-bold" href="index.html">
+        <img src="Webbed128.png" alt="Webbed Logo" class="me-2" style="height: 32px;">
+        Webbed
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
-          <li class="nav-item"><a class="nav-link" href="#usecases">Use Cases</a></li>
-          <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
         </ul>
       </div>
     </div>
@@ -73,7 +107,7 @@
   <div class="container" data-aos="fade-up">
     <h1 class="display-5 fw-bold mb-3">Webbed: A Client-Side Script Security Inspector</h1>
     <p class="lead mb-4">Scan a website for JavaScript vulnerabilities and missing security headers — all using a browser extension.</p>
-    <a href="https://github.com/your-repo" class="btn btn-primary btn-lg me-3">View on GitHub</a>
+    <a href="https://github.com/mason1ee/FYP-25-S2-12" class="btn btn-primary btn-lg me-3">View on GitHub</a>
     <a href="#features" class="btn btn-outline-primary btn-lg">Explore Features</a>
   </div>
 </section>
@@ -83,85 +117,154 @@
   <div class="container text-center">
     <h2 class="fw-bold mb-5" data-aos="fade-up">Key Features</h2>
     <div class="row g-4">
+      <!-- Feature Cards -->
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="p-4 feature-card h-100">
+          <i class="fas fa-code text-primary mb-3" style="font-size: 2.5rem;"></i>
           <h5 class="fw-semibold text-primary">Real-Time Script Analysis</h5>
-          <p class="mt-2">Detects dangerous JavaScript patterns like <code>eval()</code>, <code>innerHTML</code>, and obfuscated code.</p>
+          <p>Detects dangerous JavaScript patterns like <code>eval()</code>, <code>innerHTML</code>, and obfuscated code in real-time as you browse.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="p-4 feature-card h-100">
+          <i class="fas fa-shield-alt text-primary mb-3" style="font-size: 2.5rem;"></i>
           <h5 class="fw-semibold text-primary">Security Header Scanner</h5>
-          <p class="mt-2">Checks CSP, X-Frame-Options, X-Content-Type-Options, and more.</p>
+          <p>Comprehensive analysis of CSP, X-Frame-Options, X-Content-Type-Options, HSTS, and other critical security headers.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
         <div class="p-4 feature-card h-100">
+          <i class="fas fa-lock text-primary mb-3" style="font-size: 2.5rem;"></i>
           <h5 class="fw-semibold text-primary">HTTPS & Mixed Content Detection</h5>
-          <p class="mt-2">Warns about insecure HTTP or mixed-content resources.</p>
+          <p>Identifies insecure HTTP resources, mixed content issues, and SSL/TLS configuration problems.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Screenshots Section -->
+<section id="screenshots" class="py-5 bg-light text-center">
+  <div class="container" data-aos="fade-up">
+    <h2 class="fw-bold mb-4">Screenshots</h2>
+    <p class="lead mb-5">Take a closer look at how Webbed works in action.</p>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="screenshot-wrapper" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="images/mainPage.png">
+          <img src="mainPage.png" class="img-fluid rounded shadow-sm uniform-img" alt="Webbed Dashboard Screenshot">
+        </div>
+        <p class="small mt-2 text-muted">Webbed dashboard with scan results</p>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="screenshot-wrapper" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="images/blacklisted.png">
+          <img src="blacklisted.png" class="img-fluid rounded shadow-sm uniform-img" alt="Blacklisted Screenshot">
+        </div>
+        <p class="small mt-2 text-muted">Blacklist unsafe JavaScript on selected sites</p>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="screenshot-wrapper" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="images/securityReport.png">
+          <img src="securityReport.png" class="img-fluid rounded shadow-sm uniform-img" alt="Security Report Screenshot">
+        </div>
+        <p class="small mt-2 text-muted">Generate detailed security reports</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Enlarged Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" src="" class="img-fluid rounded shadow" alt="Enlarged screenshot">
+    </div>
+  </div>
+</div>
+
 <!-- How It Works -->
 <section id="how" class="py-5 bg-white">
   <div class="container text-center" data-aos="fade-up">
     <h2 class="fw-bold mb-4">How It Works</h2>
-    <p>Webbed scans any website you visit for unsafe JavaScript, missing security headers, and weak client-side protections. It analyzes scripts in real time, checks for HTTPS usage, and flags risky code or domains. One click gives you a clear report of potential vulnerabilities.</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="lead">Webbed operates entirely within your browser, providing instant security analysis without sending any data to external servers. Simply install the extension and browse normally - Webbed will automatically scan each page for vulnerabilities.</p>
+        <div class="row mt-5">
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-download text-primary mb-2" style="font-size: 2rem;"></i>
+            <h6 class="fw-semibold">Install Extension</h6>
+            <p class="small">One-click installation from your browser's extension store</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-search text-primary mb-2" style="font-size: 2rem;"></i>
+            <h6 class="fw-semibold">Browse Normally</h6>
+            <p class="small">Webbed scans automatically in the background</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-chart-bar text-primary mb-2" style="font-size: 2rem;"></i>
+            <h6 class="fw-semibold">View Results</h6>
+            <p class="small">Get instant reports with actionable insights</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Use Cases -->
 <section id="usecases" class="py-5 bg-light">
   <div class="container text-center" data-aos="fade-up">
-    <h2 class="fw-bold mb-4">Why use Webbed</h2>
-    <p>Made for the everyday users.<br>
-      100% client-side, nothing sent to the cloud<br>
-      Works out-of-the-box, no setup required<br>
-      No technical knowledge needed<br>
-      Lightweight and free to use</p>
+    <h2 class="fw-bold mb-4">Why Choose Webbed?</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <i class="fas fa-users text-primary me-2"></i><strong> Made for Everyone</strong>
+            <p class="text-muted small">For both security professionals and everyday users</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <i class="fas fa-user-shield text-primary me-2"></i><strong> 100% Client-Side</strong>
+            <p class="text-muted small">All analysis happens locally in your browser</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <i class="fas fa-rocket text-primary me-2"></i><strong> Zero Setup</strong>
+            <p class="text-muted small">No configuration required</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <i class="fas fa-graduation-cap text-primary me-2"></i><strong> No Technical Knowledge</strong>
+            <p class="text-muted small">Easy-to-understand reports for all users</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Demo -->
 <section id="demo" class="py-5 bg-white text-center">
   <div class="container" data-aos="fade-up">
-    <h2 class="fw-bold mb-4">Live Demo</h2>
-    <p class="mb-4">The extension in action</p>
-    <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Demo Video" allowfullscreen></iframe>
+    <h2 class="fw-bold mb-4">See Webbed in Action</h2>
+    <p class="mb-4 lead">Watch how Webbed identifies security vulnerabilities in real-time</p>
+    <div class="ratio ratio-16x9 mx-auto mb-4" style="max-width: 800px;">
+      <div class="d-flex align-items-center justify-content-center bg-light border rounded">
+        <div>
+          <i class="fas fa-play-circle text-primary" style="font-size: 4rem;"></i>
+          <p class="mt-3 mb-0">Demo Video Coming Soon</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-5 bg-white">
-  <div class="container" data-aos="fade-up">
-    <h2 class="fw-bold mb-4 text-center">Get in Touch</h2>
-    <form class="mx-auto" style="max-width: 600px;">
-      <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Name">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Your Email</label>
-        <input type="email" class="form-control" id="email" placeholder="you@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="5" placeholder="Let's discuss Webbed!"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+    <a href="https://github.com/mason1ee/FYP-25-S2-12" class="btn btn-primary btn-lg">Try Webbed Now</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="text-center">
   <div class="container">
-    <small>&copy; 2025 Melvin. Webbed Security Inspector. All rights reserved.</small>
+    <div class="mb-3">
+      <a href="index.html" class="text-decoration-none me-4">Home</a>
+      <a href="about.html" class="text-decoration-none me-4">About Us</a>
+      <a href="policy.html" class="text-decoration-none me-4">Privacy Policy</a>
+      <a href="terms.html" class="text-decoration-none">Terms of Service</a>
+    </div>
+    <small>&copy; 2025 Webbed Security Inspector. All rights reserved.</small>
   </div>
 </footer>
 
@@ -170,7 +273,15 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
-</script>
 
+  // Modal image logic
+  document.querySelectorAll('.screenshot-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', function () {
+      const imgSrc = this.getAttribute('data-image');
+      const modalImg = document.getElementById('modalImage');
+      modalImg.src = imgSrc;
+    });
+  });
+</script>
 </body>
 </html>
