@@ -1,0 +1,15 @@
+{
+  "name": "client-side-script-security-inspector",
+  "version": "1.0.0",
+  "description": "A Chrome Extension that scans websites for client-side security issues.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "FYP-25-S2-12",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "keywords": []
+}
